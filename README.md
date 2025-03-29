@@ -4,8 +4,6 @@ This repository outlines a standard folder structure for organizing Maya project
 
 ## Folder Hierarchy
 
-```html
-<pre>
 Maya_Project/                                <!-- Root project directory -->
 ├── assets/                                  <!-- Contains all reusable elements like characters and props -->
 │   ├── characters/                          <!-- Directory for all character assets -->
@@ -38,4 +36,3 @@ Maya_Project/                                <!-- Root project directory -->
 ├── renderData/                              <!-- Maya's internal render settings and data -->
 ├── scripts/                                 <!-- Custom MEL/Python scripts for tools or automation -->
 └── cache/                                   <!-- Simulation caches like Alembic or nCache -->
-</pre>
