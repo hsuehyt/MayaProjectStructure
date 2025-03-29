@@ -11,53 +11,61 @@
         }
 
         .folder-tree {
-            white-space: pre;
+            display: flex;
+            flex-direction: column;
             background: #fff;
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
+        .folder-line {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .folder-name {
+            min-width: 260px;
+            white-space: pre;
+        }
+
         .folder-comment {
-            color: #999;
+            color: #666;
         }
     </style>
 </head>
 <body>
     <h1>Maya Project Folder Structure</h1>
     <div class="folder-tree">
-        Maya_Project/  ⟶ Root project directory
-        ├── assets/  ⟶ All reusable elements like characters and props
-        │   ├── characters/  ⟶ Folder for all character assets
-        │   │   ├── char_A/  ⟶ Character A asset directory
-        │   │   │   ├── model/  ⟶ Geometry and modeling files
-        │   │   │   ├── rig/  ⟶ Rigging setups
-        │   │   │   ├── textures/  ⟶ Textures specific to char_A
-        │   │   │   └── lookdev/  ⟶ Look development (shading/material tests)
-        │   │   ├── char_B/  ⟶ Character B
-        │   │   └── char_C/  ⟶ Character C
-        │   └── props/  ⟶ Props used in scenes
-        │       └── ...  ⟶ Additional props go here
-        │
-        ├── scenes/  ⟶ Shot-specific animation and scene setup
-        │   ├── scene_01/  ⟶ Scene 01 content
-        │   │   ├── anim/  ⟶ Animation files for scene 01
-        │   │   ├── layout/  ⟶ Camera, staging, and blocking
-        │   │   ├── lighting/  ⟶ Lighting setups
-        │   │   └── render/  ⟶ Final render scenes or output
-        │   └── scene_02/  ⟶ Scene 02 content
-        │       ├── anim/  ⟶ Animation files for scene 02
-        │       ├── layout/  ⟶ Camera and shot layout
-        │       ├── lighting/  ⟶ Lighting setups
-        │       └── render/  ⟶ Render output
-        │
-        ├── sourceimages/  ⟶ Image files used as textures or references
-        │   └── textures/  ⟶ Shared texture files used across assets
-        │
-        ├── images/  ⟶ Playblasts, snapshots, preview renders
-        ├── renderData/  ⟶ Maya's internal render settings and data
-        ├── scripts/  ⟶ Custom MEL/Python scripts for tools or automation
-        └── cache/  ⟶ Simulation caches like Alembic or nCache
+        <div class="folder-line"><span class="folder-name">Maya_Project/</span><span class="folder-comment">Root project directory</span></div>
+        <div class="folder-line"><span class="folder-name">├── assets/</span><span class="folder-comment">All reusable elements like characters and props</span></div>
+        <div class="folder-line"><span class="folder-name">│   ├── characters/</span><span class="folder-comment">Folder for all character assets</span></div>
+        <div class="folder-line"><span class="folder-name">│   │   ├── char_A/</span><span class="folder-comment">Character A asset directory</span></div>
+        <div class="folder-line"><span class="folder-name">│   │   │   ├── model/</span><span class="folder-comment">Geometry and modeling files</span></div>
+        <div class="folder-line"><span class="folder-name">│   │   │   ├── rig/</span><span class="folder-comment">Rigging setups</span></div>
+        <div class="folder-line"><span class="folder-name">│   │   │   ├── textures/</span><span class="folder-comment">Textures specific to char_A</span></div>
+        <div class="folder-line"><span class="folder-name">│   │   │   └── lookdev/</span><span class="folder-comment">Look development (shading/material tests)</span></div>
+        <div class="folder-line"><span class="folder-name">│   │   ├── char_B/</span><span class="folder-comment">Character B</span></div>
+        <div class="folder-line"><span class="folder-name">│   │   └── char_C/</span><span class="folder-comment">Character C</span></div>
+        <div class="folder-line"><span class="folder-name">│   └── props/</span><span class="folder-comment">Props used in scenes</span></div>
+        <div class="folder-line"><span class="folder-name">│       └── ...</span><span class="folder-comment">Additional props go here</span></div>
+        <div class="folder-line"><span class="folder-name">├── scenes/</span><span class="folder-comment">Shot-specific animation and scene setup</span></div>
+        <div class="folder-line"><span class="folder-name">│   ├── scene_01/</span><span class="folder-comment">Scene 01 content</span></div>
+        <div class="folder-line"><span class="folder-name">│   │   ├── anim/</span><span class="folder-comment">Animation files for scene 01</span></div>
+        <div class="folder-line"><span class="folder-name">│   │   ├── layout/</span><span class="folder-comment">Camera, staging, and blocking</span></div>
+        <div class="folder-line"><span class="folder-name">│   │   ├── lighting/</span><span class="folder-comment">Lighting setups</span></div>
+        <div class="folder-line"><span class="folder-name">│   │   └── render/</span><span class="folder-comment">Final render scenes or output</span></div>
+        <div class="folder-line"><span class="folder-name">│   └── scene_02/</span><span class="folder-comment">Scene 02 content</span></div>
+        <div class="folder-line"><span class="folder-name">│       ├── anim/</span><span class="folder-comment">Animation files for scene 02</span></div>
+        <div class="folder-line"><span class="folder-name">│       ├── layout/</span><span class="folder-comment">Camera and shot layout</span></div>
+        <div class="folder-line"><span class="folder-name">│       ├── lighting/</span><span class="folder-comment">Lighting setups</span></div>
+        <div class="folder-line"><span class="folder-name">│       └── render/</span><span class="folder-comment">Render output</span></div>
+        <div class="folder-line"><span class="folder-name">├── sourceimages/</span><span class="folder-comment">Image files used as textures or references</span></div>
+        <div class="folder-line"><span class="folder-name">│   └── textures/</span><span class="folder-comment">Shared texture files used across assets</span></div>
+        <div class="folder-line"><span class="folder-name">├── images/</span><span class="folder-comment">Playblasts, snapshots, preview renders</span></div>
+        <div class="folder-line"><span class="folder-name">├── renderData/</span><span class="folder-comment">Maya's internal render settings and data</span></div>
+        <div class="folder-line"><span class="folder-name">├── scripts/</span><span class="folder-comment">Custom MEL/Python scripts for tools or automation</span></div>
+        <div class="folder-line"><span class="folder-name">└── cache/</span><span class="folder-comment">Simulation caches like Alembic or nCache</span></div>
     </div>
 </body>
 </html>
