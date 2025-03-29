@@ -11,61 +11,63 @@
         }
 
         .folder-tree {
-            display: flex;
-            flex-direction: column;
             background: #fff;
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
-        .folder-line {
+        .row {
             display: flex;
             gap: 1rem;
+            align-items: start;
+            line-height: 1.4;
         }
 
-        .folder-name {
-            min-width: 260px;
+        .path {
+            min-width: 200px;
             white-space: pre;
         }
 
-        .folder-comment {
-            color: #666;
+        .comment {
+            flex: 1;
+            text-align: left;
+            color: #444;
         }
     </style>
 </head>
 <body>
     <h1>Maya Project Folder Structure</h1>
     <div class="folder-tree">
-        <div class="folder-line"><span class="folder-name">Maya_Project/</span><span class="folder-comment">Root project directory</span></div>
-        <div class="folder-line"><span class="folder-name">├── assets/</span><span class="folder-comment">All reusable elements like characters and props</span></div>
-        <div class="folder-line"><span class="folder-name">│   ├── characters/</span><span class="folder-comment">Folder for all character assets</span></div>
-        <div class="folder-line"><span class="folder-name">│   │   ├── char_A/</span><span class="folder-comment">Character A asset directory</span></div>
-        <div class="folder-line"><span class="folder-name">│   │   │   ├── model/</span><span class="folder-comment">Geometry and modeling files</span></div>
-        <div class="folder-line"><span class="folder-name">│   │   │   ├── rig/</span><span class="folder-comment">Rigging setups</span></div>
-        <div class="folder-line"><span class="folder-name">│   │   │   ├── textures/</span><span class="folder-comment">Textures specific to char_A</span></div>
-        <div class="folder-line"><span class="folder-name">│   │   │   └── lookdev/</span><span class="folder-comment">Look development (shading/material tests)</span></div>
-        <div class="folder-line"><span class="folder-name">│   │   ├── char_B/</span><span class="folder-comment">Character B</span></div>
-        <div class="folder-line"><span class="folder-name">│   │   └── char_C/</span><span class="folder-comment">Character C</span></div>
-        <div class="folder-line"><span class="folder-name">│   └── props/</span><span class="folder-comment">Props used in scenes</span></div>
-        <div class="folder-line"><span class="folder-name">│       └── ...</span><span class="folder-comment">Additional props go here</span></div>
-        <div class="folder-line"><span class="folder-name">├── scenes/</span><span class="folder-comment">Shot-specific animation and scene setup</span></div>
-        <div class="folder-line"><span class="folder-name">│   ├── scene_01/</span><span class="folder-comment">Scene 01 content</span></div>
-        <div class="folder-line"><span class="folder-name">│   │   ├── anim/</span><span class="folder-comment">Animation files for scene 01</span></div>
-        <div class="folder-line"><span class="folder-name">│   │   ├── layout/</span><span class="folder-comment">Camera, staging, and blocking</span></div>
-        <div class="folder-line"><span class="folder-name">│   │   ├── lighting/</span><span class="folder-comment">Lighting setups</span></div>
-        <div class="folder-line"><span class="folder-name">│   │   └── render/</span><span class="folder-comment">Final render scenes or output</span></div>
-        <div class="folder-line"><span class="folder-name">│   └── scene_02/</span><span class="folder-comment">Scene 02 content</span></div>
-        <div class="folder-line"><span class="folder-name">│       ├── anim/</span><span class="folder-comment">Animation files for scene 02</span></div>
-        <div class="folder-line"><span class="folder-name">│       ├── layout/</span><span class="folder-comment">Camera and shot layout</span></div>
-        <div class="folder-line"><span class="folder-name">│       ├── lighting/</span><span class="folder-comment">Lighting setups</span></div>
-        <div class="folder-line"><span class="folder-name">│       └── render/</span><span class="folder-comment">Render output</span></div>
-        <div class="folder-line"><span class="folder-name">├── sourceimages/</span><span class="folder-comment">Image files used as textures or references</span></div>
-        <div class="folder-line"><span class="folder-name">│   └── textures/</span><span class="folder-comment">Shared texture files used across assets</span></div>
-        <div class="folder-line"><span class="folder-name">├── images/</span><span class="folder-comment">Playblasts, snapshots, preview renders</span></div>
-        <div class="folder-line"><span class="folder-name">├── renderData/</span><span class="folder-comment">Maya's internal render settings and data</span></div>
-        <div class="folder-line"><span class="folder-name">├── scripts/</span><span class="folder-comment">Custom MEL/Python scripts for tools or automation</span></div>
-        <div class="folder-line"><span class="folder-name">└── cache/</span><span class="folder-comment">Simulation caches like Alembic or nCache</span></div>
+        <div class="row"><div class="path">Maya_Project/</div><div class="comment">Root project directory</div></div>
+        <div class="row"><div class="path">├── assets/</div><div class="comment">All reusable elements like characters and props</div></div>
+        <div class="row"><div class="path">│   ├── characters/</div><div class="comment">Folder for all character assets</div></div>
+        <div class="row"><div class="path">│   │   ├── char_A/</div><div class="comment">Character A asset directory</div></div>
+        <div class="row"><div class="path">│   │   │   ├── model/</div><div class="comment">Geometry and modeling files</div></div>
+        <div class="row"><div class="path">│   │   │   ├── rig/</div><div class="comment">Rigging setups</div></div>
+        <div class="row"><div class="path">│   │   │   ├── textures/</div><div class="comment">Textures specific to char_A</div></div>
+        <div class="row"><div class="path">│   │   │   └── lookdev/</div><div class="comment">Look development (shading/material tests)</div></div>
+        <div class="row"><div class="path">│   │   ├── char_B/</div><div class="comment">Character B</div></div>
+        <div class="row"><div class="path">│   │   └── char_C/</div><div class="comment">Character C</div></div>
+        <div class="row"><div class="path">│   └── props/</div><div class="comment">Props used in scenes</div></div>
+        <div class="row"><div class="path">│       └── ...</div><div class="comment">Additional props go here</div></div>
+        <div class="row"><div class="path">├── scenes/</div><div class="comment">Shot-specific animation and scene setup</div></div>
+        <div class="row"><div class="path">│   ├── scene_01/</div><div class="comment">Scene 01 content</div></div>
+        <div class="row"><div class="path">│   │   ├── anim/</div><div class="comment">Animation files for scene 01</div></div>
+        <div class="row"><div class="path">│   │   ├── layout/</div><div class="comment">Camera, staging, and blocking</div></div>
+        <div class="row"><div class="path">│   │   ├── lighting/</div><div class="comment">Lighting setups</div></div>
+        <div class="row"><div class="path">│   │   └── render/</div><div class="comment">Final render scenes or output</div></div>
+        <div class="row"><div class="path">│   └── scene_02/</div><div class="comment">Scene 02 content</div></div>
+        <div class="row"><div class="path">│       ├── anim/</div><div class="comment">Animation files for scene 02</div></div>
+        <div class="row"><div class="path">│       ├── layout/</div><div class="comment">Camera and shot layout</div></div>
+        <div class="row"><div class="path">│       ├── lighting/</div><div class="comment">Lighting setups</div></div>
+        <div class="row"><div class="path">│       └── render/</div><div class="comment">Render output</div></div>
+        <div class="row"><div class="path">├── sourceimages/</div><div class="comment">Image files used as textures or references</div></div>
+        <div class="row"><div class="path">│   └── textures/</div><div class="comment">Shared texture files used across assets</div></div>
+        <div class="row"><div class="path">├── images/</div><div class="comment">Playblasts, snapshots, preview renders</div></div>
+        <div class="row"><div class="path">├── renderData/</div><div class="comment">Maya's internal render settings and data</div></div>
+        <div class="row"><div class="path">├── scripts/</div><div class="comment">Custom MEL/Python scripts for tools or automation</div></div>
+        <div class="row"><div class="path">└── cache/</div><div class="comment">Simulation caches like Alembic or nCache</div></div>
     </div>
 </body>
 </html>
